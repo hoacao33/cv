@@ -1,36 +1,242 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV — Hoa Cao</title>
-  <style>
-    :root { --fg: #1a1a1a; --muted: #666; --accent: #2563eb; }
-    * { box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--fg); max-width: 720px; margin: 0 auto; padding: 48px 24px;
-      line-height: 1.6;
-    }
-    h1 { margin: 0 0 4px; font-size: 2rem; }
-    .role { color: var(--accent); font-weight: 600; }
-    .contact { color: var(--muted); font-size: 0.9rem; margin: 8px 0 32px; }
-    h2 { border-bottom: 2px solid #eee; padding-bottom: 4px; margin-top: 32px; }
-    .muted { color: var(--muted); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-  <h1>Hoa Cao</h1>
-  <div class="role">Software Engineer</div>
-  <div class="contact">lamhiep16@gmail.com · github.com/hoacao33</div>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #fff; }
+    [data-cv-canvas] { background: #fff !important; padding: 0 !important; }
+    [data-cv-page] { box-shadow: none !important; }
+    [data-cv-toolbar] { display: none !important; }
+    [data-cv-badge] { display: none !important; }
+  }
+</style>
+</helmet>
 
-  <h2>Giới thiệu</h2>
-  <p>Đây là CV test. Nội dung thật gửi sau, thay vào đây.</p>
+<div data-cv-canvas style="background:#ECEDEF; min-height:100vh; width:100%; padding:28px 12px 40px; display:flex; flex-direction:column; align-items:center; font-family:'Hanken Grotesk',sans-serif;">
 
-  <h2>Kinh nghiệm</h2>
-  <p class="muted">Cập nhật sau…</p>
+  <template id="__bundler_thumbnail"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="16" fill="#3e6aa8"/><text x="50" y="63" font-family="sans-serif" font-size="32" font-weight="700" fill="#fff" text-anchor="middle">CV</text></svg></template>
 
-  <h2>Kỹ năng</h2>
-  <p class="muted">Cập nhật sau…</p>
+  <div data-cv-page data-screen-label="CV" style="--ink:#16181d; --body:#3b3e45; --muted:#8a8e97; --line:#e7e8ea; --accent:#3e6aa8; width:210mm; min-height:297mm; padding:16mm 18mm; background:#fff; color:var(--body); font-family:'Hanken Grotesk',sans-serif; font-size:12.5px; line-height:1.5; box-shadow:0 10px 44px rgba(20,24,35,.16);">
+
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:24px;">
+      <div>
+        <div style="font:700 30px/1.02 'Schibsted Grotesk',sans-serif; letter-spacing:-0.02em; color:var(--ink);">Cao Thi Hoa</div>
+        <div style="font:600 15px/1 'Schibsted Grotesk',sans-serif; color:var(--accent); margin-top:8px;">Senior Business Analyst</div>
+        <div style="font-size:12px; color:var(--muted); margin-top:6px;">Banking &amp; Financial Services · 12 years in software delivery</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:9px;">
+        <span style="font:600 10px/1 'JetBrains Mono',monospace; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:4px 11px;">Open to remote</span>
+        <div style="font-size:11.5px; color:var(--body); text-align:right; line-height:1.75;">Ho Chi Minh City, Vietnam<br>{{ phone }}<br>{{ email }}</div>
+      </div>
+    </div>
+    <div style="height:1px; background:var(--line); margin:15px 0 17px;"></div>
+
+    <!-- Profile -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:9px;">
+        <span style="width:14px; height:2px; background:var(--accent); border-radius:1px;"></span>
+        <span style="font:700 11px/1 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink);">Profile</span>
+        <span style="flex:1; height:1px; background:var(--line);"></span>
+      </div>
+      <p style="margin:0 0 7px; color:var(--body); max-width:80ch; text-wrap:pretty;">Business Analyst with <strong style="color:var(--ink);font-weight:600;">12 years</strong> in software delivery — most recently in <strong style="color:var(--ink);font-weight:600;">banking and financial services</strong>, where reliability, security and regulatory compliance are critical. Currently senior BA on a Caribbean bank's group <strong style="color:var(--ink);font-weight:600;">digital-onboarding and KYC/AML remediation platform spanning 13 countries</strong>, owning end-to-end analysis: requirements elicitation, <strong style="color:var(--ink);font-weight:600;">functional specifications / PRDs, BPMN process flows and data / information models</strong> that engineering builds directly from.</p>
+      <p style="margin:0; color:var(--body); max-width:80ch; text-wrap:pretty;">A strong <strong style="color:var(--ink);font-weight:600;">technical foundation</strong> (QA and web-development background, SQL, system-design literacy) lets me bridge business intent and engineering reality. I run an <strong style="color:var(--ink);font-weight:600;">AI-assisted analysis workflow with strict source-traceability</strong>, turning raw materials into clear, buildable, audit-ready requirements. Excellent written and spoken English from over a decade with US, UK, Korean and European teams.</p>
+    </div>
+
+    <!-- Core Competencies -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:11px;">
+        <span style="width:14px; height:2px; background:var(--accent); border-radius:1px;"></span>
+        <span style="font:700 11px/1 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink);">Core Competencies</span>
+        <span style="flex:1; height:1px; background:var(--line);"></span>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 26px;">
+        <sc-for list="{{ competencies }}" as="c" hint-placeholder-count="7">
+          <div style="position:relative; padding-left:16px; line-height:1.4;" style-before="content:''; position:absolute; left:0; top:5px; width:6px; height:6px; border:1.5px solid var(--accent); border-radius:50%;"><span style="color:var(--ink); font-weight:600;">{{ c.t }}</span><span style="color:var(--body);"> — {{ c.d }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:9px;">
+        <span style="width:14px; height:2px; background:var(--accent); border-radius:1px;"></span>
+        <span style="font:700 11px/1 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink);">Technical Skills</span>
+        <span style="flex:1; height:1px; background:var(--line);"></span>
+      </div>
+      <div style="display:grid; grid-template-columns:148px 1fr; gap:5px 16px; padding:6px 0; border-top:1px solid var(--line); align-items:start;">
+        <div style="font:600 12px/1.4 'Hanken Grotesk'; color:var(--accent);">Data &amp; systems</div>
+        <div style="color:var(--body);"><strong style="color:var(--ink);font-weight:600;">SQL</strong> (querying / data validation) · general understanding of <strong style="color:var(--ink);font-weight:600;">system design</strong> and object-oriented concepts</div>
+      </div>
+      <div style="display:grid; grid-template-columns:148px 1fr; gap:5px 16px; padding:6px 0; border-top:1px solid var(--line); align-items:start;">
+        <div style="font:600 12px/1.4 'Hanken Grotesk'; color:var(--accent);">Modelling &amp; BA tools</div>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          <sc-for list="{{ tools }}" as="t" hint-placeholder-count="6">
+            <span style="font-size:11.5px; font-weight:500; color:var(--ink); background:#f4f5f6; border:1px solid var(--line); border-radius:5px; padding:3px 9px;">{{ t }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:148px 1fr; gap:5px 16px; padding:6px 0; border-top:1px solid var(--line); align-items:start;">
+        <div style="font:600 12px/1.4 'Hanken Grotesk'; color:var(--accent);">AI-assisted BA workflow</div>
+        <div style="color:var(--body);">An LLM-agent pipeline (not ad-hoc chat) that extracts requirements from raw materials, drafts functional specs and user stories, and generates BPMN flows and UI mockups — with source-traceability discipline to prevent hallucinated requirements. <em style="color:var(--muted);">Tooling: Claude / LLM agents, prompt-driven analysis, RAG-style domain knowledge bases.</em></div>
+      </div>
+      <div style="display:grid; grid-template-columns:148px 1fr; gap:5px 16px; padding:6px 0; border-top:1px solid var(--line); align-items:start;">
+        <div style="font:600 12px/1.4 'Hanken Grotesk'; color:var(--accent);">Collaboration</div>
+        <div style="color:var(--body);">Slack · Microsoft Teams · Zoom · Excel</div>
+      </div>
+      <div style="display:grid; grid-template-columns:148px 1fr; gap:5px 16px; padding:6px 0; border-top:1px solid var(--line); align-items:start;">
+        <div style="font:600 12px/1.4 'Hanken Grotesk'; color:var(--accent);">Methodologies</div>
+        <div style="color:var(--body);">Agile (Scrum, Kanban) · full SDLC from requirements to release</div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+        <span style="width:14px; height:2px; background:var(--accent); border-radius:1px;"></span>
+        <span style="font:700 11px/1 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink);">Professional Experience</span>
+        <span style="flex:1; height:1px; background:var(--line);"></span>
+      </div>
+      <sc-for list="{{ jobs }}" as="job" hint-placeholder-count="6">
+        <div style="padding:11px 0; border-top:1px solid var(--line);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px;">
+            <div style="font:600 13.5px/1.2 'Schibsted Grotesk',sans-serif; color:var(--ink);">{{ job.role }}<span style="color:var(--accent);">, {{ job.company }}</span></div>
+            <div style="font:500 10.5px 'JetBrains Mono',monospace; color:var(--muted); white-space:nowrap; letter-spacing:0.01em;">{{ job.dates }}</div>
+          </div>
+          <sc-if value="{{ job.tag }}" hint-placeholder-val="{{ true }}"><div style="font-size:11px; font-style:italic; color:var(--muted); margin-top:2px;">{{ job.tag }}</div></sc-if>
+          <sc-if value="{{ job.summary }}" hint-placeholder-val="{{ true }}"><p style="margin:5px 0 5px; color:var(--body); max-width:94ch;">{{ job.summary }}</p></sc-if>
+          <ul style="list-style:none; margin:5px 0 0; padding:0;">
+            <sc-for list="{{ job.bullets }}" as="b" hint-placeholder-count="3">
+              <li style="position:relative; padding-left:15px; margin:0 0 4px; color:var(--body); line-height:1.46; max-width:96ch;" style-before="content:''; position:absolute; left:0; top:8px; width:6px; height:1.5px; background:var(--accent);">{{ b }}</li>
+            </sc-for>
+          </ul>
+        </div>
+      </sc-for>
+    </div>
+
+    <!-- Education + Languages -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:26px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+          <span style="width:14px; height:2px; background:var(--accent); border-radius:1px;"></span>
+          <span style="font:700 11px/1 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink);">Education</span>
+        </div>
+        <p style="margin:0; color:var(--body); line-height:1.6;">Diploma — Web Development<br><span style="color:var(--muted);">Infoworld School</span></p>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+          <span style="width:14px; height:2px; background:var(--accent); border-radius:1px;"></span>
+          <span style="font:700 11px/1 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink);">Languages</span>
+        </div>
+        <p style="margin:0; color:var(--body); line-height:1.6;"><strong style="color:var(--ink);font-weight:600;">Vietnamese</strong> — native<br><strong style="color:var(--ink);font-weight:600;">English</strong> — fluent (12 years with US / UK / EU teams)</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;820&quot;,&quot;height&quot;:&quot;1180&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const competencies = [
+      { t: "Requirements engineering & knowledge extraction", d: "Eliciting and structuring requirements from business stakeholders and SMEs." },
+      { t: "Functional specifications", d: "PRDs, feature specs, back-office specs, acceptance criteria." },
+      { t: "Business process design (BPMN)", d: "Process flows, decision diagrams and swim-lane models to improve operations." },
+      { t: "Data / information modelling", d: "Field-level data mapping, system-to-system models, integration contracts." },
+      { t: "Business modelling & consultancy", d: "Translating business goals into system functionality; MVP scoping, roadmaps." },
+      { t: "Stakeholder management", d: "Multi-party alignment across business, compliance, technology and end users." },
+      { t: "Abstract thinking & communication", d: "Distilling complex, compliance-heavy domains into clear, traceable artifacts." },
+    ];
+    const tools = ["BPMN — Camunda Modeler", "draw.io", "Figma", "Jira", "Confluence", "Postman"];
+    const jobs = [
+      {
+        role: "Senior Business Analyst",
+        company: "Republic Bank Trinidad & Tobago",
+        tag: "freelance · full-time · remote",
+        dates: "Oct 2025 — Present",
+        summary: "Senior BA on a group digital-onboarding and KYC / AML remediation platform serving 13 Caribbean countries, plus the bank's Wealth onboarding programme; led requirements analysis and estimation for the upcoming business (corporate) onboarding programme.",
+        bullets: [
+          "Authored functional specifications and PRDs for personal-customer digital onboarding, client remediation (identity, proof of address, proof of employment), Wealth onboarding and mobile-adoption journeys.",
+          "Designed BPMN process flows and decision diagrams for multi-tenant client and back-office journeys, including conditional document-verification and status-lifecycle logic.",
+          "Built data / information models and field-level mappings for system integrations — e.g. core banking ↔ wealth-management client / portfolio binding, and AML / KYC form-to-system mapping.",
+          "Translated regulatory and compliance requirements (AML, KYC, eKYC, document verification) into buildable, jurisdiction-specific functionality across tenants.",
+          "Wrote Jira user stories with acceptance criteria and back-office specifications; partnered with engineering, QA and bank SMEs through delivery, testing and validation.",
+          "Maintained a single source of truth across the programme — every requirement traceable to a source and consistent across countries.",
+        ],
+      },
+      {
+        role: "Product Manager / Group Lead",
+        company: "Bosch Global Software Technologies",
+        tag: "",
+        dates: "Jan 2023 — Sep 2025",
+        summary: "",
+        bullets: [
+          "Owned product definition end-to-end: elicited and analysed requirements, wrote specifications and translated business goals into buildable features for engineering.",
+          "Managed the product backlog and user stories; prioritised scope with stakeholders and resolved requirement conflicts across cross-functional teams.",
+          "Analysed problems from a customer-centric perspective to shape the best solution; mapped and improved delivery workflows (~20% reduction in cycle times).",
+          "Bridged business stakeholders and engineering on global products, keeping requirements clear, traceable and aligned to business goals.",
+        ],
+      },
+      {
+        role: "Senior Project Manager / Product Analyst",
+        company: "Spirit Labs",
+        tag: "",
+        dates: "Jan 2021 — Sep 2022",
+        summary: "",
+        bullets: [
+          "Led business analysis and delivery for outsourced products, including a fintech application — defining scope and requirements with stakeholders.",
+          "Managed the product backlog and user stories in line with the product vision.",
+          "Provided product consulting to startups: MVP planning, product roadmaps and requirements definition.",
+          "Identified strategic risks and adjusted plans to keep delivery on track across a cross-functional team (Devs, QC, BAs, Designers).",
+        ],
+      },
+      {
+        role: "QA Lead (supporting Project Management)",
+        company: "B13 Technology, United Kingdom",
+        tag: "freelance · remote",
+        dates: "Jan 2020 — Jan 2021",
+        summary: "",
+        bullets: [
+          "Led quality across an offshore UK–Vietnam team and supported the PM function; bridged Developers, BA, Design, QC and the client, facilitating Agile process and quality / risk control to ship fast and meet client expectations.",
+        ],
+      },
+      {
+        role: "Technical Business Analyst / Product Manager",
+        company: "OnSolve, USA",
+        tag: "",
+        dates: "2017 — Jan 2020",
+        summary: "",
+        bullets: [
+          "Worked directly with the US team as a technical BA: analysed the product, defined software-development functions, managed backlog and wrote user stories; bridged Developers, QC and the Product Owner through delivery planning and demos.",
+        ],
+      },
+      {
+        role: "QA Analyst / BA support",
+        company: "Total Soft Bank (TSB), South Korea",
+        tag: "maritime & port logistics software",
+        dates: "2013 — 2017",
+        summary: "",
+        bullets: [
+          "Supported a global product team (South Korea, Spain, Japan, Egypt) on enterprise maritime / port logistics software as a BA / QA: clarified requirements, supported developers across the full SDLC, and ran integration, system and acceptance testing.",
+        ],
+      },
+    ];
+    return { competencies, tools, jobs, phone: "+84 907 50 4041", email: "caohoadn@gmail.com" };
+  }
+}
+</script>
 </body>
 </html>
